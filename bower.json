@@ -1,0 +1,22 @@
+{
+  "name": "video_player",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "wrtirado <wrtirado@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.6",
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3"
+  }
+}
