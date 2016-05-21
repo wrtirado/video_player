@@ -9,6 +9,8 @@ function runPlayer(){
   seekslider = document.getElementById("seekslider")
   // Add event listeners
   playPause.addEventListener("click", playPauseVideo, false)
+  seekslider.addEventListener("change", vidSeek, false)
+  video.addEventListener("timeupdate", seekTimeUpdate, false)
 }
 window.onload = runPlayer
 
@@ -30,4 +32,14 @@ function playPauseVideo() {
     function skip(value) {
         var video = document.getElementById("Video1");
         video.currentTime += value;
+    }
+
+    function vidSeek (){
+      var seekTo = video.duration * (seekslider.value / 100)
+      video.currentTime = seekTo
+    }
+
+    function seekTimeUpdate (){
+      var newTime = video.currentTime * (100 / video.duration)
+      seekslider.value = newTime
     }
