@@ -7,6 +7,7 @@
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -19,8 +20,15 @@
         <div class="col l2 m1 hide-on-small-only center-align">
           <h2 class="blue-text text-darken-3">Video</h2>
         </div>
-        <div class="col l8 m10 s12 center-align">
-            <video class="video" width=”100px” height=”100px” controls src="http://video.bbemaildelivery.com/698ef524-730d-4afa-9e78-aea9d16ecf9f_LowDesktop.mp4"></video>
+        <div class="col l8 m10 s12 center-align centerDiv">
+            <video class="video" id="Video1" width=”100px” height=”100px” src="http://video.bbemaildelivery.com/698ef524-730d-4afa-9e78-aea9d16ecf9f_LowDesktop.mp4"></video>
+            <div id="buttonBar">
+                <button id="play">Play</button>
+                <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
+                <button id="rew" onclick="skip(-10)"></button>
+                <button id="fastFwd" onclick="skip(10)"></button>
+                <button id="restart" onclick="restart()"></button>
+            </div>
         </div>
         <div class="col l2 m1 hide-on-small-only center-align">
           <h2 class="blue-text text-darken-3">Player</h2>

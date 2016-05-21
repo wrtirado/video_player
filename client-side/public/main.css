@@ -2,3 +2,13 @@
   padding: 0;
   margin: 0;
 }
+
+#buttonBar {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.centerDiv {
+  background-color: black;
+}
