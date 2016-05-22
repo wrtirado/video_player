@@ -4,11 +4,19 @@
 }
 
 #buttonBar {
-  background-color: #333;
+  background-color: #c2f1ff;
   padding: 10px;
   margin-bottom: 10px;
 }
 
 .centerDiv {
   background-color: black;
+}
+
+#seekSlider {
+  width: 55%;
+}
+
+#volumeSlider {
+  width: 10%;
 }
