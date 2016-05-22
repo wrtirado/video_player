@@ -4,7 +4,9 @@ var video,
     curtimetext,
     durtimetext,
     muteBtn,
-    volumeSlider
+    volumeSlider,
+    videoContainer,
+    buttonBar
 
 function runPlayer(){
   // Set object references
@@ -15,12 +17,16 @@ function runPlayer(){
   durtimetext = document.getElementById("durtimetext")
   muteBtn = document.getElementById("muteBtn")
   volumeSlider = document.getElementById("volumeSlider")
+  videoContainer = document.getElementById("videoContainer")
+  buttonBar = document.getElementById("buttonBar")
   // Add event listeners
   playPause.addEventListener("click", playPauseVideo, false)
   seekSlider.addEventListener("change", vidSeek, false)
   video.addEventListener("timeupdate", seekTimeUpdate, false)
   muteBtn.addEventListener("click", vidMute, false)
   volumeSlider.addEventListener("change", setVolume, false)
+  videoContainer.addEventListener("mouseover", showControllBar, false)
+  videoContainer.addEventListener("mouseleave", hideControllBar, false)
 
 
 }
@@ -29,10 +35,8 @@ window.onload = runPlayer
 function playPauseVideo() {
        if (video.paused) {
           video.play();
-          playPause.textContent = "Pause";
        } else {
           video.pause();
-          playPause.textContent = "Play";
        }
     }
 
@@ -70,14 +74,20 @@ function playPauseVideo() {
       durtimetext.textContent = durationMins + ":" + durationSecs
     }
 
+    function showControllBar () {
+      buttonBar.style.opacity = 1
+    }
+
+    function hideControllBar () {
+      buttonBar.style.opacity = 0.0
+    }
+
     function vidMute (){
       if (video.muted) {
          video.muted = false
-         muteBtn.textContent = "Mute"
          volumeSlider.value = 100
       } else {
          video.muted = true
-         muteBtn.textContent = "Un-Mute"
          volumeSlider.value = 0
       }
     }
