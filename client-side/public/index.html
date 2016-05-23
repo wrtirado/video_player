@@ -4,34 +4,40 @@
 <head>
     <meta charset="utf-8">
     <title>Video Player</title>
+    <!-- Sourcing in jQuery and Materialize using Bower -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.js"></script>
-    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
+    <!-- Sourcing in regular js and css files -->
+    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body class="blue lighten-5">
+    <!-- Main Title -->
     <div class="center-align">
         <h1 class="blue-text text-darken-3">Will's</h1>
     </div>
+    <!-- Left side content -->
     <div class="row">
         <div class="col l2 m1 hide-on-small-only center-align">
-          <h2 class="blue-text text-darken-3">Video</h2>
+            <h2 class="blue-text text-darken-3">Video</h2>
         </div>
+        <!-- Main video and video controller content -->
         <div id="videoContainer" class="col l8 m10 s12 centerDiv">
             <video autoplay class="video center-align" id="Video1" width=”100px” height=”100px” src="http://video.bbemaildelivery.com/698ef524-730d-4afa-9e78-aea9d16ecf9f_LowDesktop.mp4"></video>
             <div id="buttonBar">
                 <button id="play" type="button"></button>
-                <input  id="seekSlider" type="range" min="0" max="100" value="0" step="1">
-                <span   id="curtimetext"></span> / <span id="durtimetext"></span>
-                <input  id="volumeSlider" type="range" min="0" max="100" value="100" step="1">
+                <input id="seekSlider" type="range" min="0" max="100" value="0" step="1">
+                <span id="curtimetext"></span> / <span id="durtimetext"></span>
+                <input id="volumeSlider" type="range" min="0" max="100" value="100" step="1">
                 <button id="muteBtn" type="button"></button>
                 <button id="restart" onclick="restart()"></button>
             </div>
         </div>
+        <!-- Right side content -->
         <div class="col l2 m1 hide-on-small-only center-align">
-          <h2 class="blue-text text-darken-3">Player</h2>
+            <h2 class="blue-text text-darken-3">Player</h2>
         </div>
     </div>
 </body>

@@ -1,107 +1,93 @@
+/*Removing padding, margin, and setting width for the video*/
+
 .video {
-  padding: 0;
-  margin: 0;
-  width: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
-
 #buttonBar {
-  background-color: #4B4B4B;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  opacity: 0.0;
-  position: relative;
+    background-color: #4B4B4B;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    opacity: 0.0;
+    position: relative;
 }
-
 #videoContainer {
-  height: 100%;
-  background-color: #E3F2FD;
+    height: 100%;
+    background-color: #E3F2FD;
 }
-
 #videoContainer:hover {
-  opacity: 1;
+    opacity: 1;
 }
-
 #play {
-  background-image: url(./images/play_pause_button.png);
-  background-size: contain;
-  border: none;
-  width: 32.3px;
-  height: 32.5px;
-  cursor: pointer;
-  opacity: 0.7;
-  position: relative;
-  top: 9px;
-  border-radius: 100%;
-  opacity: 0.5;
+    background-image: url(./images/play_pause_button.png);
+    background-size: contain;
+    border: none;
+    width: 32.3px;
+    height: 32.5px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+    top: 9px;
+    border-radius: 100%;
+    opacity: 0.5;
 }
-
 #restart {
-  background-image: url(./images/restart_button.png);
-  background-size: contain;
-  border: none;
-  width: 32.3px;
-  height: 32.5px;
-  cursor: pointer;
-  opacity: 0.7;
-  position: relative;
-  top: 9px;
-  border-radius: 100%;
-  opacity: 0.5;
+    background-image: url(./images/restart_button.png);
+    background-size: contain;
+    border: none;
+    width: 32.3px;
+    height: 32.5px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+    top: 9px;
+    border-radius: 100%;
+    opacity: 0.5;
 }
-
 #muteBtn {
-  background-image: url(./images/volume_off_button.ico);
-  background-size: contain;
-  border: none;
-  width: 32.3px;
-  height: 32.5px;
-  cursor: pointer;
-  opacity: 0.7;
-  position: relative;
-  top: 9px;
-  border-radius: 100%;
-  opacity: 0.5;
+    background-image: url(./images/volume_off_button.ico);
+    background-size: contain;
+    border: none;
+    width: 32.3px;
+    height: 32.5px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+    top: 9px;
+    border-radius: 100%;
+    opacity: 0.5;
 }
-
 #play:hover {
-  opacity: 1.0
+    opacity: 1.0
 }
-
 #restart:hover {
-  opacity: 1.0
+    opacity: 1.0
 }
-
 #muteBtn:hover {
-  opacity: 1.0
+    opacity: 1.0
 }
-
 .centerDiv {
-  background-color: black;
+    background-color: black;
 }
-
 #seekSlider {
-  width: 65%;
+    width: 65%;
 }
-
 #volumeSlider {
-  width: 10%;
+    width: 10%;
 }
-
 #curtimetext {
-  color: gray
+    color: gray
 }
-
 #durtimetext {
-  color: gray
+    color: gray
 }
-
 input[type=range] {
-  -webkit-appearance: none;
-  background: blue;
-  height: 4px;
+    -webkit-appearance: none;
+    background: blue;
+    height: 4px;
 }
-
 input[type=range]::-webkit-slider-runnable-track {
     width: 65%;
     height: 5px;
@@ -109,20 +95,17 @@ input[type=range]::-webkit-slider-runnable-track {
     border: #666 1px solid;
     border-radius: 3px;
 }
-
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background: red;
-  height: 15px;
-  width: 5px;
-  border-radius: 15%;
-  cursor: pointer;
+    -webkit-appearance: none;
+    background: red;
+    height: 15px;
+    width: 5px;
+    border-radius: 15%;
+    cursor: pointer;
 }
-
 input[type=range]:focus {
     outline: none;
 }
-
 input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ccc;
 }
